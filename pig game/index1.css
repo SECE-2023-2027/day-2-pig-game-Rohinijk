@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(135deg, #df5ba8, #f3c35d, #8cddea, #a88fd0, #74e2a7, #f08a5d);
+  background-size: 400% 400%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.game-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;  
+}
+main {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+}
+.players {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+.player {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+}
+.player--active {
+  border: 2px solid #ffd700;
+  transform: scale(1.05);
+}
+.name {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+.score {
+  font-size: 50px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+.current {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+.current-label {
+  font-size: 14px;
+  color: white;
+}
+.current-score {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: white;
+}
+.dice {
+  width: 100px;
+  margin: 30px auto 20px;
+  display: block;
+  filter: drop-shadow(0 0 10px #fff);
+  border-radius: 10px;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.btn {
+  background: linear-gradient(to right, #f9d423, #ff4e50);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+ 
+}
+
+
