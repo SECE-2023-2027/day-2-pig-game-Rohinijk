@@ -10,7 +10,6 @@ const current0El = document.getElementById("current--0");
 const current1El = document.getElementById("current--1");
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
-
 const btnNew = document.getElementById("btn--new");
 const btnRoll = document.getElementById("btn--roll");
 const btnHold = document.getElementById("btn--hold");
@@ -29,15 +28,12 @@ function init() {
   currentScore = 0;
   activePlayer = 0;
   playing = true;
-
   score0El.textContent = 0;
   score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
-
   diceEl.style.display = "block";
   diceEl.src = "dice1.jpg";
-
   player0El.classList.add("player--active");
   player1El.classList.remove("player--active");
   player0El.style.background = "";
@@ -50,14 +46,16 @@ btnRoll.addEventListener("click", function () {
   const dice = Math.trunc(Math.random() * 6) + 1;
   diceEl.src = `dice${dice}.jpg`;
 
-  if (dice !== 1) {
-    currentScore += dice;
-    document.getElementById(`current--${activePlayer}`).textContent = currentScore;
-  } else {
-    switchPlayer();
+  switch (dice) {
+    case 1:
+      switchPlayer();
+      break;
+    default:
+      currentScore += dice;
+      document.getElementById(`current--${activePlayer}`).textContent = currentScore;
+      break;
   }
 });
-
 btnHold.addEventListener("click", function () {
   if (!playing) return;
 
